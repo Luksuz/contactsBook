@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body style="height: 100vh;">
+    
+    <div class="d-flex h-100 justify-content-center align-items-center">
+        <div class="col-12 col-md-6 col-xl-4 d-flex flex-column border border-3 rounded-5 p-5 shadow-lg">
+            <h1>Login</h1>
+            <form>
+                <div class="d-flex flex-column input-group">
+                    <label for="Email">Email: </label><input  class="rounded-2" id="email">
+                    <label for="Password">Password: </label><input  class="rounded-2" id="password">
+                </div>
+                <button class="btn btn-outline-primary my-2" id="submit">Submit</button>
+            </form>
+            <h6>Still dont have an account? <a href="Register.html">Register</a></h6>
+        </div>
+    </div>
+
+    <div class="toast position-fixed top-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="./images/user.png" class="rounded me-2" alt="user">
+          <strong class="me-auto">Error message</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <p id="error-message"></p>
+        </div>
+      </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
