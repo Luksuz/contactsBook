@@ -16,7 +16,7 @@ submitBtnEL.addEventListener('click', async (e) => {
         email,
         password
     };
-    const response = await fetch('http://localhost:5000/api/users/register', {
+    const response = await fetch('https://winged-axon-394617.ew.r.appspot.com/api/users/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

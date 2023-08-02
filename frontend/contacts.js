@@ -97,7 +97,7 @@ function getCookie(name) {
 console.log(accessToken);
 
 async function fetchContactsAndPopulateTable() {
-  const response = await fetch("http://localhost:5000/api/contacts", {
+  const response = await fetch("https://winged-axon-394617.ew.r.appspot.com/api/contacts", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -146,7 +146,7 @@ async function updateContact(userData) {
   const { nameData, emailData, phoneData } = userData;
   console.log(userData);
 
-  const response = await fetch("http://localhost:5000/api/contacts", {
+  const response = await fetch("https://winged-axon-394617.ew.r.appspot.com/api/contacts", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -165,7 +165,7 @@ async function createContact(userData) {
   const { nameData, emailData, phoneData } = userData;
   console.log(userData);
 
-  const response = await fetch("http://localhost:5000/api/contacts", {
+  const response = await fetch("https://winged-axon-394617.ew.r.appspot.com/api/contacts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -183,7 +183,7 @@ async function createContact(userData) {
 async function deleteContact(userEmail) {
   console.log("starting delete");
   try {
-    const response = await fetch("https://localhost:5000/api/contacts", {
+    const response = await fetch("https://winged-axon-394617.ew.r.appspot.com/api/contacts", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
