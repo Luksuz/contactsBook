@@ -21,9 +21,9 @@ submitBtnEL.addEventListener('click', async (e) => {
         body: JSON.stringify(data),
     });
     const responseData = await response.json();
-    cookies.set('accessToken', responseData.accessToken);
     console.log(response.status);
     if (response.status === 200) {
+        document.cookie = `accessToken=${responseData.accessToken}; secure; SameSite=None;`;
         window.location.href = './contacts.html';
     } else {
         const errorMessage = responseData.message
@@ -31,4 +31,5 @@ submitBtnEL.addEventListener('click', async (e) => {
         toastEl.classList.add('show');
     }
 });
+
 
