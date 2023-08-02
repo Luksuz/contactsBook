@@ -61,11 +61,6 @@ const loginUser = asyncHandler(async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "10m" }
       );
-      res.cookie('accessToken', accessToken, {
-        httpOnly: true,
-        secure: true,
-
-      });
       res.status(200).json({accessToken, message: "User logged in!" });
     } else {
       res.status(401).json({ message: "Wrong username or password" });

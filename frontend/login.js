@@ -18,10 +18,10 @@ submitBtnEL.addEventListener('click', async (e) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        credentials: 'include', // Include cookies with cross-origin requests
         body: JSON.stringify(data),
     });
     const responseData = await response.json();
+    cookies.set('accessToken', responseData.accessToken);
     console.log(response.status);
     if (response.status === 200) {
         window.location.href = './contacts.html';
