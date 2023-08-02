@@ -61,12 +61,10 @@ const loginUser = asyncHandler(async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "10m" }
       );
-  
-      // Set the access token in an HTTP-only cookie
       res.cookie('accessToken', accessToken, {
         httpOnly: true,
-        secure: true, // Enable this option if your application is served over HTTPS
-        // Other cookie options (e.g., expiration, domain, path) can be specified here
+        secure: true,
+
       });
       res.status(200).json({accessToken, message: "User logged in!" });
     } else {
@@ -74,8 +72,6 @@ const loginUser = asyncHandler(async (req, res) => {
     }
   });
   
-              
-
 //@desc current user info
 //@route POST /users/current
 //@access Public
