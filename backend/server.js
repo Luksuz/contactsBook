@@ -5,7 +5,10 @@ const connectDB = require("./config/dbConnection");
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+const allowedOrigin = "https://stirring-sorbet-b05a87.netlify.app"
+
+app.use(cors({origin: allowedOrigin}));
 connectDB();
 const port = process.env.PORT || 5000;
 

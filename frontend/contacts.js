@@ -99,7 +99,6 @@ console.log(accessToken);
 async function fetchContactsAndPopulateTable() {
   const response = await fetch("https://winged-axon-394617.ew.r.appspot.com/api/contacts", {
     method: "GET",
-    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${accessToken}`,
